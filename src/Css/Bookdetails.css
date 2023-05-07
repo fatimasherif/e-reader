@@ -1,0 +1,47 @@
+.center {
+  width: 250px;
+  height: 350px;
+  display: block;
+  float: left;
+  margin-left: 300px;
+  box-shadow: -14px 0px 13px 9px;
+}
+body {
+  background-color: rgb(253, 247, 239);
+}
+.details-page .paper .right-one {
+  width: 600px;
+  float: left;
+  margin: 10px;
+  margin-left: 200px;
+  background: url("/public/images/whitebackground.jpg") right bottom left
+    no-repeat;
+}
+.details-page .paper .left-one {
+  text-align: right;
+  display: block;
+  width: 500px;
+  width: 500px;
+  float: right;
+
+  margin: 20px;
+}
+.details-page .paper {
+}
+h3 {
+  font-family: system-ui;
+}
+p {
+  font-family: system-ui;
+}
+.details-page .imgandpara {
+  display: flex;
+  margin-bottom: 20px;
+}
+.details-page .imgandpara .right-paragraph {
+  margin-left: 50px;
+  width: 300px;
+  float: right;
+  width: 300px;
+  float: right;
+}

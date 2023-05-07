@@ -1,0 +1,12 @@
+.main-div .react-multi-carousel-list {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  margin-left: 150px;
+  position: relative;
+}
+
+.react-multi-carousel-item {
+  width: 150px;
+  height: 400px;
+}

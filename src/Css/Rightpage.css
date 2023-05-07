@@ -1,0 +1,30 @@
+.right-page {
+  margin: 90px;
+  width: 700px;
+}
+.cros {
+  margin-top: 0px;
+  margin-left: 30px;
+  width: 700px;
+}
+body {
+  background-color: #fbfaf7;
+}
+.right-page .popular-cards {
+  display: flex;
+  flex-direction: row;
+  margin-left: 60px;
+}
+.right-page .popular-cards .card-body {
+  margin-right: 30px;
+}
+.right-page .popular-cards .card-body img {
+  margin-bottom: 15px;
+}
+.right-page .popular-cards .card-body .name {
+  font-family: system-ui;
+}
+.right-page .popular-cards .the-card {
+  width: 150px;
+  height: 200px;
+}

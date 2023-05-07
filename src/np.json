@@ -1,0 +1,128 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "email": "sh@gmail.com",
+      "password": "fsadf",
+      "status": "active",
+      "type": "reader",
+      "avatar": null,
+      "created_at": "2023-04-29T00:49:39.000Z"
+    },
+    {
+      "id": 2,
+      "email": "sdf@sdf.com",
+      "password": "fsdf",
+      "status": "active",
+      "type": "reader",
+      "avatar": null,
+      "created_at": "2023-04-29T07:59:58.000Z"
+    },
+    {
+      "id": 3,
+      "email": "sdf@sdf.com",
+      "password": "fsdf",
+      "status": "active",
+      "type": "reader",
+      "avatar": null,
+      "created_at": "2023-04-30T16:02:18.000Z"
+    },
+    {
+      "id": 4,
+      "email": "sdf@sdf.com",
+      "password": "fsdf",
+      "status": "active",
+      "type": "reader",
+      "avatar": null,
+      "created_at": "2023-04-30T16:03:00.000Z"
+    },
+    {
+      "id": 6,
+      "email": "sdf@f.com",
+      "password": "fsdf",
+      "status": "active",
+      "type": "reader",
+      "avatar": null,
+      "created_at": "2023-04-30T22:11:16.000Z"
+    },
+    {
+      "id": 7,
+      "email": "sdf@f.com",
+      "password": "fsdf",
+      "status": "active",
+      "type": "reader",
+      "avatar": null,
+      "created_at": "2023-04-30T22:13:45.000Z"
+    },
+    {
+      "id": 8,
+      "email": "sdf@f.com",
+      "password": "fsdf",
+      "status": "active",
+      "type": "reader",
+      "avatar": null,
+      "created_at": "2023-04-30T22:14:42.000Z"
+    },
+    {
+      "id": 9,
+      "email": "sdf@f.com",
+      "password": "fsdf",
+      "status": "active",
+      "type": "reader",
+      "avatar": null,
+      "created_at": "2023-04-30T22:16:17.000Z"
+    },
+    {
+      "id": 10,
+      "email": "sdf@f.com",
+      "password": "fsdf",
+      "status": "active",
+      "type": "reader",
+      "avatar": null,
+      "created_at": "2023-04-30T22:16:44.000Z"
+    },
+    {
+      "id": 11,
+      "email": "sdf@f.com",
+      "password": "fsdf",
+      "status": "active",
+      "type": "reader",
+      "avatar": null,
+      "created_at": "2023-04-30T22:16:47.000Z"
+    },
+    {
+      "id": 12,
+      "email": "sfsdfh@gmail.com",
+      "password": "fsadf",
+      "status": "active",
+      "type": "reader",
+      "avatar": null,
+      "created_at": "2023-05-01T09:05:57.000Z"
+    }
+  ],
+
+  "book": [
+    {
+      "id": 1,
+      "name": "sdd",
+      "description": "sdfsdf",
+      "author": "sdf",
+      "field": "sdf",
+      "publication_date": "2023-04-09T22:00:00.000Z",
+      "pdf_file": null,
+      "created_at": "2023-04-29T00:49:54.000Z",
+      "poster": null
+    },
+    {
+      "id": 2,
+      "name": "fas",
+      "description": null,
+      "author": "a",
+      "field": null,
+      "publication_date": "2023-04-09T22:00:00.000Z",
+      "pdf_file": null,
+      "created_at": "2023-04-29T07:59:34.000Z",
+      "poster": null
+    }
+  ]
+}

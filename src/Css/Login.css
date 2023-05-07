@@ -1,0 +1,16 @@
+.login-conatiner {
+  margin: auto;
+  width: 50%;
+  margin-top: 5rem;
+}
+.login-conatiner .mb-3 {
+  margin: 3rem;
+}
+.login-conatiner .btn {
+  margin: auto;
+  display: flex;
+  color: rgb(236, 227, 216);
+  background-color: black;
+  width: 80px;
+  text-align: center;
+}
