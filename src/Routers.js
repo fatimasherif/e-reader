@@ -13,6 +13,10 @@ import UpdateBook from "./modules/ManageBooks/UpdateBook";
 import ManageBooks from "./modules/ManageBooks/ManageBooks";
 import ContactUs from "./modules/ContactUs/ContactUs";
 import PdfViewer from "./modules/PdfViewer/PdfViewer";
+import ManageChapters from "./modules/Managechapters/manageChapters";
+import Addchapter from "./modules/Managechapters/Addchapter";
+import Updatechapter from "./modules/Managechapters/Updatechapter";
+import Guest from "./middlewear/Guest.js";
 export const routers = createBrowserRouter([
   {
     path: "",
@@ -23,12 +27,17 @@ export const routers = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/login",
-        element: <Login />,
-      },
-      {
-        path: "/register",
-        element: <Register />,
+        element: <Guest />,
+        children: [
+          {
+            path: "/login",
+            element: <Login />,
+          },
+          {
+            path: "/register",
+            element: <Register />,
+          },
+        ],
       },
       {
         path: "/library",
@@ -73,6 +82,24 @@ export const routers = createBrowserRouter([
           {
             path: "update",
             element: <UpdateBook />,
+          },
+        ],
+      },
+      {
+        path: "/manage-chapters",
+
+        children: [
+          {
+            path: "",
+            element: <ManageChapters />,
+          },
+          {
+            path: "add-chapters",
+            element: <Addchapter />,
+          },
+          {
+            path: "update-chapter",
+            element: <Updatechapter />,
           },
         ],
       },

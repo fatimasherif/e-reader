@@ -1,4 +1,9 @@
 .paragraph-read .btn {
   border-radius: 30px;
-  
+}
+.paragraph-read .dropdown {
+  position: relative;
+}
+.paragraph-read .dropdown-menu {
+  position: absolute;
 }

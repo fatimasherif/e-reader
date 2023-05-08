@@ -9,7 +9,7 @@ const NewSeries = () => {
     <div style={{ marginLeft: "55px", marginTop: "70px" }}>
       <h3
         style={{
-          fontFamily: "Serif",
+          fontFamily: "system-ui",
           fontSize: "2rem",
           marginBottom: "10px",
         }}

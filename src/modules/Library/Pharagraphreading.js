@@ -22,19 +22,16 @@ const Pharagraphreading = () => {
         Don't let the story end just yet. Continue reading your last book and
         immerse yourself in the world of literature.
       </p>
-      <Link
-        to={"/pdf"}
-        className="btn"
-        style={{
-          textAlign: "center",
-          borderRadius: "30px",
-          backgroundColor: "black",
-          height: "40px",
-          marginTop: "15px",
-        }}
-      >
-        Start reading <FiArrowUpRight />
-      </Link>
+      <label>
+        What genre you want to read?
+        <select>
+          <option>Novels</option>
+
+          <option> History </option>
+
+          <option>Science</option>
+        </select>
+      </label>
     </div>
   );
 };

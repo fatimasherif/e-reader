@@ -20,7 +20,7 @@ const Bookcard = (props) => {
             <Link to={"id:"} className="link">
               <Card.Title
                 style={{
-                  fontFamily: "Serif",
+                  fontFamily: "system-ui",
                   fontSize: "1.5rem",
                   fontWeight: "bold",
                   textDecoration: "none",

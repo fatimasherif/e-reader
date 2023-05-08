@@ -2,8 +2,11 @@ import React from "react";
 import { Form } from "react-bootstrap";
 import axios from "axios";
 import { Component } from "react";
+import "../../Css/Addbook.css";
+import { Link } from "react-router-dom";
+import "../../Css/Addchapter.css";
 
-class UpdateBook extends Component {
+class Addchapter extends Component {
   state = {
     selectedFile: null,
   };
@@ -50,7 +53,7 @@ class UpdateBook extends Component {
   render() {
     return (
       <div
-        className="container-addbook"
+        className="container-addchapter"
         style={{ width: "500px", margin: "auto" }}
       >
         <h3
@@ -64,41 +67,34 @@ class UpdateBook extends Component {
             justifyContent: "center",
           }}
         >
-          Update Book Details
+          Chapter Details
         </h3>
         <Form>
           <Form.Group className="mb-3">
             <Form.Label>Book Name</Form.Label>
             <Form.Control />
+
+            <Form.Group className="mb-3">
+              <Form.Label>Chapter title</Form.Label>
+              <Form.Control />
+            </Form.Group>
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label>Description</Form.Label>
-            <Form.Control />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Author</Form.Label>
+            <Form.Label>Chapter Description</Form.Label>
             <Form.Control />
           </Form.Group>
 
-          <Form.Group className="mb-3">
-            <Form.Label>Field</Form.Label>
-            <Form.Control />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Publication Date</Form.Label>
-            <Form.Control />
-          </Form.Group>
           <section className="mb-3">
-            <label>Book Pdf :-</label>
+            <label>Chapter Pdf :-</label>
             <input
               type="file"
               onChange={this.onFileChange}
               style={{ marginBottom: "20px" }}
             />
-            <button onClick={this.onFileUpload}>Upload!</button>
+            <Link onClick={this.onFileUpload}>Upload!</Link>
           </section>
 
-          <button
+          <Link
             variant="primary"
             type="submit"
             style={{
@@ -114,11 +110,11 @@ class UpdateBook extends Component {
             }}
           >
             Submit
-          </button>
+          </Link>
         </Form>
       </div>
     );
   }
 }
 
-export default UpdateBook;
+export default Addchapter;

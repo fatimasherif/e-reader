@@ -3,7 +3,6 @@ import React from "react";
 import { Booksinfo } from "../../Booksinfo";
 
 import Rightpage from "./Rightpage";
-import Categories from "./Categories";
 
 const Home = () => {
   return (

@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 import axios from "axios";
 import { Component } from "react";
 
-class UpdateBook extends Component {
+class Updatechapter extends Component {
   state = {
     selectedFile: null,
   };
@@ -27,7 +27,7 @@ class UpdateBook extends Component {
     if (this.state.selectedFile) {
       return (
         <div>
-          <h2>File Details:</h2>
+          <h2>Chapter Details:</h2>
           <p>File Name: {this.state.selectedFile.name}</p>
 
           <p>File Type: {this.state.selectedFile.type}</p>
@@ -64,32 +64,19 @@ class UpdateBook extends Component {
             justifyContent: "center",
           }}
         >
-          Update Book Details
+          Update Chapter
         </h3>
         <Form>
           <Form.Group className="mb-3">
-            <Form.Label>Book Name</Form.Label>
+            <Form.Label>Chapter title </Form.Label>
             <Form.Control />
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label>Description</Form.Label>
             <Form.Control />
           </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Author</Form.Label>
-            <Form.Control />
-          </Form.Group>
-
-          <Form.Group className="mb-3">
-            <Form.Label>Field</Form.Label>
-            <Form.Control />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Publication Date</Form.Label>
-            <Form.Control />
-          </Form.Group>
           <section className="mb-3">
-            <label>Book Pdf :-</label>
+            <label>Chapter Pdf :-</label>
             <input
               type="file"
               onChange={this.onFileChange}
@@ -121,4 +108,4 @@ class UpdateBook extends Component {
   }
 }
 
-export default UpdateBook;
+export default Updatechapter;

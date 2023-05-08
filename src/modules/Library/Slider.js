@@ -7,10 +7,39 @@ import "react-multi-carousel/lib/styles.css";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const info = Booksinfo;
 
 const Slider = () => {
+  const [Books, setBooks] = useState({
+    loading: true,
+    results: [],
+    err: null,
+    reload: 0,
+  });
+  const [search, setSearch] = useState("");
+  useEffect(() => {
+    setBooks({ ...Books, loading: true });
+    axios
+      .get("http://localhost:4000/movies", {
+        params: {
+          search: search,
+        },
+      })
+      .then((resp) => {
+        console.log(resp);
+        setBooks({ ...Books, results: resp.data, loading: false, err: null });
+      })
+      .catch((err) => {
+        setBooks({
+          ...Books,
+          loading: false,
+          err: " something went wrong, please try again later ! ",
+        });
+      });
+  }, [Books.reload]);
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },

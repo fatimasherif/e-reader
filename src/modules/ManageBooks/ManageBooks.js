@@ -19,7 +19,7 @@ const ManageBooks = () => {
           justifyContent: "space-between",
         }}
       >
-        <h3>Manage Books</h3>
+        <h3>Books List</h3>
         <Link
           className="btn float-right "
           to={"add"}
@@ -61,11 +61,11 @@ const ManageBooks = () => {
                 Show
               </Link>
               <Link
-                to={"/listbooks"}
+                to={"/manage-chapters"}
                 className="btn btn-sm"
                 style={{ backgroundColor: "lightgrey" }}
               >
-                List
+                Manage Chapters
               </Link>
             </td>
           </tr>
@@ -86,11 +86,11 @@ const ManageBooks = () => {
                 Show
               </Link>
               <Link
-                to={"/listbooks"}
+                to={"/manage-chapters"}
                 className="btn btn-sm "
                 style={{ backgroundColor: "lightgrey" }}
               >
-                List
+                Manage chapters
               </Link>
             </td>
           </tr>

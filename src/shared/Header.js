@@ -1,81 +1,69 @@
 import React from "react";
 import "../Css/Header.css";
-import { CiSearch } from "react-icons/ci";
-import { RiNotification2Line } from "react-icons/ri";
-import ManageBooks from "../modules/ManageBooks/ManageBooks";
+import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
-
+import "../Css/Header.css";
+import Container from "react-bootstrap/Container";
+import { removeAuthUser, getAuthUser } from "../helper/Storage";
+import { useNavigate } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
 import Side from "./Side";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const auth = getAuthUser();
+  const Logout = () => {
+    removeAuthUser();
+    navigate("/");
+  };
   return (
     <div>
-      <Side />
-      <nav className="navbar">
-        <form className="form-inline">
-          <CiSearch
-            style={{
-              marginTop: "20px",
-              marginRight: "9px",
-              display: "inline-block",
-              textDecorationColor: "black",
-            }}
-          />
-          <input
-            className="form-control"
-            type="search"
-            placeholder="Search book name,author,edition"
-            aria-label="Search"
-          />
-          <button className="btn btn-dark w-2" style={{ marginTop: "15px" }}>
-            Search
-          </button>
-          <div
-            className="user-data"
-            style={{
-              display: "inline-block",
-              float: "right",
-              marginTop: "30px",
-              marginBottom: "20px",
-            }}
-          >
-            <Link
-              to={"/manage-books"}
-              style={{
-                marginRight: "500px",
-                color: "#db8b8b",
-                fontSize: "15px",
-              }}
-            >
-              Manage Books
+      <div>
+        <Side />
+      </div>
+      <Navbar className="navbar">
+        <Container>
+          <Navbar.Brand>
+            <Link className="nav-link" to={"/"}>
+              Home
             </Link>
-            <Link
-              to={"/contact"}
-              style={{
-                marginRight: "50px",
-                color: "#db8b8b",
-                fontSize: "15px",
-              }}
-            >
+          </Navbar.Brand>
+          <Nav className="me-auto">
+            <Link className="nav-link" to={"/library"}>
+              library
+            </Link>
+
+            {!auth && (
+              <>
+                <Link className="nav-link" to={"/login"}>
+                  Login
+                </Link>
+                <Link className="nav-link" to={"/register"}>
+                  Register
+                </Link>
+              </>
+            )}
+
+            {auth && auth.type === 1 && (
+              <>
+                <Link className="nav-link" to={"/manage-books"}>
+                  Manage Books
+                </Link>
+              </>
+            )}
+          </Nav>
+
+          <Nav className="ms-auto">
+            {auth && <Nav.Link onClick={Logout}>Logout</Nav.Link>}
+          </Nav>
+          <Nav className="me-auto">
+            <Link className="nav-link" to={"/contact"}>
               Contact Us
             </Link>
-            <button
-              className="notification-button"
-              style={{
-                fontSize: "20px",
-                textAlign: "center",
-                cursor: "pointer",
-                border: "none",
-                float: "right",
-                background: "none",
-              }}
-            >
-              <RiNotification2Line className="Ri" />
-            </button>
-          </div>
-        </form>
-      </nav>
+          </Nav>
+        </Container>
+      </Navbar>
     </div>
   );
 };

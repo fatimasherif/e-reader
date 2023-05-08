@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-multi-carousel/lib/styles.css";
-import { Worker, Viewer } from "@react-pdf-viewer/core";
 
 import "bootstrap/dist/css/bootstrap.css";
 import { AuthProvider } from "./context/Authprovier";
+import axios from "axios";
 
 import { routers } from "./Routers";
 
