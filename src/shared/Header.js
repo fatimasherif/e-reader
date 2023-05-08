@@ -45,7 +45,7 @@ const Header = () => {
               </>
             )}
 
-            {auth && auth.type === 1 && (
+            {auth && auth.type === "admin" && (
               <>
                 <Link className="nav-link" to={"/manage-books"}>
                   Manage Books
